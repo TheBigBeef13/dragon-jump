@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dnhow4fj1jg3j"]
 
+[ext_resource type="Script" uid="uid://bhttwohrn2rye" path="res://camera_rig.gd" id="1_0vvw7"]
+
 [node name="CameraRig" type="Node3D" unique_id=1640316311]
+script = ExtResource("1_0vvw7")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=970321103]
 spring_length = 5.0

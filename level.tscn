@@ -11,8 +11,9 @@ size = Vector3(10, 0.5, 10)
 
 [node name="Level" type="Node3D" unique_id=19630041]
 
-[node name="Player" parent="." unique_id=673021503 instance=ExtResource("1_u52ul")]
+[node name="Player" parent="." unique_id=673021503 node_paths=PackedStringArray("camera_rig") instance=ExtResource("1_u52ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2590852, 0)
+camera_rig = NodePath("../CameraRig")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=799457520]
 transform = Transform3D(1, 0, 0, 0, 0.8083895, 0.58864796, 0, -0.58864796, 0.8083895, 0, 4.2051024, 0)
@@ -25,5 +26,6 @@ shape = SubResource("BoxShape3D_emg46")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=855628742]
 mesh = SubResource("BoxMesh_emg46")
 
-[node name="CameraRig" parent="." unique_id=1640316311 instance=ExtResource("2_vonw3")]
+[node name="CameraRig" parent="." unique_id=1640316311 node_paths=PackedStringArray("player") instance=ExtResource("2_vonw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2706964, 0)
+player = NodePath("../Player")
