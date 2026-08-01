@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dnhow4fj1jg3j"]
+
+[node name="CameraRig" type="Node3D" unique_id=1640316311]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=970321103]
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1644798937]
