@@ -12,6 +12,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		yaw -= event.relative.x * 0.003
 		pitch -= event.relative.y * 0.003
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 func _process(_delta: float) -> void:
 	pitch = clamp(pitch, deg_to_rad(-40.0), deg_to_rad(70.0))
 	rotation.y = yaw
